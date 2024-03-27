@@ -3,49 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Chat-online</title>
-
-    <script type="module" >
-        import { io } from 'https://cdn.socket.io/4.3.2/socket.io.esm.min.js'
-
-        const socket = io()
-    
-        const form = document.getElementById("form")
-        const input = document.getElementById("input")
-        const messages = document.getElementById("messages")
-
-        socket.on("chat message", (msg) => {
-            const item = `<li>${msg}</li>`
-            messages.insertAdjacentHTML("beforeend", item)
-        })
-
-        form.addEventListener("submit", (e) =>{
-            e.preventDefault()
-            
-            if(input.value){
-                socket.emit("chat message", input.value)
-                input.value = ""
-            }
-        })
-
-
-    </script>
-    <style>
-        :root{
-            color-scheme: light dark;
-        }
-    </style>
 </head>
 <body>
-    <ul id="messages">
-        
-    </ul>
-    <section>
-        <form action="" id="form">
+    <div class="content">    
+    <section class="chat-users"></section>
 
-            <input id="input" type="text">
-            <button>enviar</button>
-        </form>
+    <section class="content-chat">
+        <header class="nav-bar">
+            <p>chat</p>
+        </header>
+        
+        <main class="chat">
+            <ul id="messages"></ul>
+        </main>
+
+    
+        <footer>
+            <form id="form">
+                <input id="input" type="text">
+                <button>enviar</button>
+            </form>
+        </footer>
     </section>
+    </div>
+    <script type="module" src="code.js"></script>
 </body>
 </html>

@@ -12,6 +12,12 @@ const io = new Server(server, {
   }
 })
 
+// servir los archivos html, css y javascript
+// El client es el nombre del archivo 
+app.use(express.static("client"));
+
+
+
 io.on('connection', (socket) => {
   console.log('Un cliente se ha conectado')
 
@@ -24,8 +30,9 @@ io.on('connection', (socket) => {
   })
 })
 
+
 app.get('/', (req, res) => {
-  res.sendFile(process.cwd() + '/client/index.html')
+  res.render("index")
 })
 
 server.listen(PORT, () => {

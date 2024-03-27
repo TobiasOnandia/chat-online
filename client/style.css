@@ -1,3 +1,24 @@
-*{
-    background: black
+:root{
+    color-scheme: link dark;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.content{
+ 
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.chat-users{
+    border: 1px solid green;
+}
+
+.content-chat{
+    border: 1px solid orange;
 }

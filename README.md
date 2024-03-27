@@ -2,4 +2,4 @@
  - [x] Crear el servidor
  - [x] Instalar Socket.io
  - [x] Compartir informacion entre varios web
- - [] Hacer la persistecia de datos
+ - [] Hacer la persistecia de datos con turso
