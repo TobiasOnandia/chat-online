@@ -5,6 +5,7 @@ const socket = io()
 const form = document.getElementById("form")
 const input = document.getElementById("MsgInput")
 const messages = document.getElementById("messages")
+const chatUsers = document.getElementById("chat-users")
 
 socket.on("chat message", (msg) => {
     const item = `<li>${msg}</li>`
@@ -19,3 +20,5 @@ form.addEventListener("submit", (e) =>{
         input.value = ""
     }
 })
+
+//get users

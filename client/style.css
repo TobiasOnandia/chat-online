@@ -17,17 +17,18 @@ body{
 }
 
 
-.content-chat{
-    height: min-content;
+.content-chat, #chat-users {
+    height: 100%;
     background-color: #1d1e24;
     border-radius: 10px;
     width: 600px;
 }
 
+
 .chat{
     display: flex;
     justify-content: start;
-    height: 500px;
+    height: 91%;
     overflow-y: scroll;
     scrollbar-width: 1px;
 }
@@ -43,7 +44,8 @@ body{
     background-color: #343541;
     text-align: end;
     padding-top: 6px;
-}
+  }
+
 
 .InputMessage, .nav-bar {
     width: 100%;
