@@ -54,7 +54,8 @@ body{
     justify-content: start;
     height: 91%;
     overflow-y: scroll;
-    scrollbar-width: 1px;
+    scroll-behavior: smooth;
+    
 }
 
 #messages{
