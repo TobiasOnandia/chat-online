@@ -12,6 +12,7 @@ const getUsername = async () => {
 
     localStorage.setItem('username', randomUsername)
     return randomUsername
+
 }
 
 
@@ -26,8 +27,6 @@ const form = document.getElementById("form")
 const input = document.getElementById("MsgInput")
 const messages = document.getElementById("messages")
 const nameUser = document.querySelector(".user")
-
-
 
 
 
